@@ -1,0 +1,56 @@
+#include<stdio.h>
+/*
+Descripcion: Calcular promedio de un alumno o alumna
+*/
+
+    /*Actividad:
+    1. Pedir cuantas calificaciones capturar
+    2. Preguntar nombre de asignaturas
+    3. Calcular el promedio
+    */
+    
+char nomMateria; //Variable Global
+double promedio = 0;
+int numCalif;
+int i;
+int x;
+
+int main(){
+    int cont;
+    double calificaciones[]={}; //Declarando arreglo de flotantes
+    
+    printf("Dime cuantas calificaciones capturar: ");
+    scanf("%d", &numCalif);
+    
+    for (i = 0; i < 7; i++) {
+        printf("Dime el nombre de la asignatura: ");
+        scanf("%s", &nomMateria);
+        printf("Primera asignatura: %d", nomMateria)
+    }
+    
+    /*printf("Dime el nombre de la asignatura: ");
+    scanf("%s", &nomMateria);
+    */
+   /* printf("Dame la primera calificacion: ");
+    scanf("%lf", calificaciones);
+
+    printf("Primera calificacion %f", calificaciones[0]);
+    */
+    for(x = 0; x < 7; x++) {
+        printf("Dame la primera calificacion: ");
+        scanf("%lf", calificaciones);
+
+        printf("Primera calificacion %f", calificaciones[0]);
+    }
+
+    for(cont = 0; cont < 7; cont++){
+        printf("Calificacion: %0.2lf\n", calificaciones[cont]);
+
+        promedio += calificaciones [cont];  
+    }
+    printf("Contador final %d\n", cont);
+    printf("\tPromedio: %0.2f\n", promedio/cont);
+
+    printf("Fin de programa");
+    return 0;
+}
